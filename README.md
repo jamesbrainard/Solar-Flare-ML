@@ -1,7 +1,7 @@
 # Solar Flare Prediction from GOES-16 X-ray Flux Data
-Processes GOES-16 satellite X-ray flux measurements to predict the occurrence of solar flares over future time horizons (6h, 12h, 18h, 24h, 48h, 72h) using forest and gradient models. 
+The purpose of this repository is to use GOES-16 satellite X-ray flux measurements to predict the occurrence of solar flares over future time horizons (6h, 12h, 18h, 24h, 48h, 72h) using forest and gradient models. 
 
-Includes the full data science pipeline: preprocessing, feature engineering, exploratory analysis, and time series classification.
+This repository includes the full data science pipeline: preprocessing, feature engineering, exploratory analysis, and time series classification.
 
 ---
 
@@ -16,7 +16,7 @@ Includes the full data science pipeline: preprocessing, feature engineering, exp
 
 ---
 
-## Datasets & Figures
+## Datasets
 
 - **Flux Data**:  
   NOAA GOES-16 XRSF-L2 Average 1-Minute X-ray Flux  
@@ -26,13 +26,21 @@ Includes the full data science pipeline: preprocessing, feature engineering, exp
   NOAA GOES-16 XRSF-L2 Flare Summary  
   [Source](https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes16/l2/data/xrsf-l2-flsum_science/)
 
-Fig. 03: Data distributions:
+---
+
+## Figures
+
+**Fig. 03: Data distributions:**
 ![Alt Text](img/fig03.png)
 
-Fig. 04: Distribution of solar flare flux magnitude, by class:
+---
+
+**Fig. 04: Distribution of solar flare flux magnitude, by class:**
 ![Alt Text](img/fig04.png)
 
-Fig. 05: Count of solar flares by year & class:
+---
+
+**Fig. 05: Count of solar flares by year & class:**
 ![Alt Text](img/fig05.png)
 
 ---
@@ -139,6 +147,8 @@ for label, window in future_windows.items():
     )
     df[f"flare_in_next_{label}"] = future_flare
 ```
+
+---
 
 ### Future improvements
 - Hyperparameter optimization
